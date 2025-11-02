@@ -5,8 +5,6 @@ const c = {
   banana: b
 };
 
-c.apple = "manzana";
+c.apple = 'manzana';
 
 const d = c.apple * 4;
-
-
