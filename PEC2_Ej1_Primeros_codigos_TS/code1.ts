@@ -4,4 +4,9 @@ const c = {
   apple: a,
   banana: b
 };
+
+c.apple = "manzana";
+
 const d = c.apple * 4;
+
+
