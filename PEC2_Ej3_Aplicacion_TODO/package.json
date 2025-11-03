@@ -1,0 +1,16 @@
+{
+  "name": "todo-typescript-app",
+  "version": "1.0.0",
+  "description": "Aplicación TODO convertida a TypeScript siguiendo arquitectura MVC",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "keywords": ["typescript", "todo", "mvc", "uoc"],
+  "author": "Laura Cuñado García",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

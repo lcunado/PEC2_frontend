@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    /* Objetivo de compilación */
+    "target": "es2015",                  // Transpila a ES2015 (compatible con navegadores modernos)
+    "module": "commonjs",                // Usa CommonJS 
+
+    /* Estructura del proyecto */
+    "rootDir": "./src",                  // Carpeta donde están los archivos fuente
+    "outDir": "./dist",                  // Carpeta donde se guardarán los archivos compilados
+
+    /* Reglas estrictas de tipado */
+    "strict": true,                      // Activa todas las comprobaciones estrictas
+    "noImplicitAny": true,               // Evita variables sin tipo explícito
+    "strictNullChecks": true,            // Controla valores null y undefined
+
+    /* Rendimiento y consistencia */
+    "incremental": true,                 // Compilación incremental
+    "tsBuildInfoFile": "./buildcache",   // Archivo auxiliar para acelerar recompilaciones
+    "forceConsistentCasingInFileNames": true, // Evita errores por mayúsculas/minúsculas en nombres de archivo
+
+    /* Compatibilidad de módulos */
+    "esModuleInterop": true,             // Permite importar módulos CommonJS con sintaxis ES6
+    "skipLibCheck": true                 // Omite comprobación de tipos en dependencias externas
+  },
+  "include": ["src"],                    // Incluye todos los archivos dentro de src/
+  "exclude": ["node_modules", "dist"]    // Excluye carpetas innecesarias
+}
