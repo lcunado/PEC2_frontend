@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TodoView = void 0;
 // Vista que gestiona el DOM y la interacción con el usuario
-class TodoView {
+export class TodoView {
     constructor() {
         this.root = document.getElementById('root');
     }
@@ -28,4 +25,3 @@ class TodoView {
         });
     }
 }
-exports.TodoView = TodoView;

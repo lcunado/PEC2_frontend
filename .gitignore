@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Compilados de TypeScript
+dist/
+build/
+buildcache
+
+# Archivos de configuración de Webpack 
+webpack-stats.json
+
+# Archivos temporales del sistema
+*.log
+*.tmp
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos de VS Code
+.vscode/
+
+# Archivos de sistema operativo
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de salida de Webpack 
+bundle.js

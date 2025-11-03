@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TodoController = void 0;
 // Controlador que conecta la vista con el servicio
-class TodoController {
+export class TodoController {
     constructor(service, view) {
         this.service = service;
         this.view = view;
@@ -33,4 +30,3 @@ class TodoController {
         this.onTodoListChanged(this.service.todos);
     }
 }
-exports.TodoController = TodoController;

@@ -1,13 +1,10 @@
-"use strict";
 /**
  * @class Model
  *
  * Manages the data of the application.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Todo = void 0;
 // Clase que implementa la interfaz ITodo
-class Todo {
+export class Todo {
     // Constructor que recibe el texto y el estado de completado
     constructor({ text, complete = false }) {
         this.id = this.uuidv4();
@@ -23,4 +20,3 @@ class Todo {
         });
     }
 }
-exports.Todo = Todo;

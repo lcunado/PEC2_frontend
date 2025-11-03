@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     /* Objetivo de compilación */
-    "target": "es2015",                  // Transpila a ES2015 (compatible con navegadores modernos)
-    "module": "commonjs",                // Usa CommonJS 
+    "target": "es6",                     // Código moderno para navegadores actuales
+    "module": "esnext",                  // Módulos ES para Webpack
 
     /* Estructura del proyecto */
     "rootDir": "./src",                  // Carpeta donde están los archivos fuente

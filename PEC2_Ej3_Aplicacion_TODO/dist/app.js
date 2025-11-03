@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const todo_service_1 = require("./services/todo.service");
-const todo_views_1 = require("./views/todo.views");
-const todo_controller_1 = require("./controllers/todo.controller");
+import { TodoService } from './services/todo.service';
+import { TodoView } from './views/todo.views';
+import { TodoController } from './controllers/todo.controller';
 // Punto de entrada de la aplicación
 // Crea las instancias y lanza el controlador
-const app = new todo_controller_1.TodoController(new todo_service_1.TodoService(), new todo_views_1.TodoView());
+const app = new TodoController(new TodoService(), new TodoView());

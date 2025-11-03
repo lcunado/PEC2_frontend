@@ -1,20 +1,17 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TodoService = void 0;
 /**
  * @class Service
  *
  * Manages the data of the application.
  */
-const todo_model_1 = require("../models/todo.model");
+import { Todo } from '../models/todo.model';
 // Servicio que gestiona la lógica de negocio de las tareas
-class TodoService {
+export class TodoService {
     // Constructor: carga tareas desde localStorage si existen
     constructor() {
         this.todos = [];
         this.onTodoListChanged = () => { };
         const stored = localStorage.getItem('todos');
-        this.todos = stored ? JSON.parse(stored).map((todo) => new todo_model_1.Todo(todo)) : [];
+        this.todos = stored ? JSON.parse(stored).map((todo) => new Todo(todo)) : [];
     }
     // Permite al controlador registrar una función que se ejecuta cuando cambia la lista
     bindTodoListChanged(callback) {
@@ -27,12 +24,12 @@ class TodoService {
     }
     // Añade una nueva tarea
     addTodo(text) {
-        this.todos.push(new todo_model_1.Todo({ text }));
+        this.todos.push(new Todo({ text }));
         this._commit(this.todos);
     }
     // Edita el texto de una tarea existente
     editTodo(id, updatedText) {
-        this.todos = this.todos.map(todo => todo.id === id ? new todo_model_1.Todo(Object.assign(Object.assign({}, todo), { text: updatedText })) : todo);
+        this.todos = this.todos.map(todo => todo.id === id ? new Todo(Object.assign(Object.assign({}, todo), { text: updatedText })) : todo);
         this._commit(this.todos);
     }
     // Elimina una tarea por ID
@@ -42,8 +39,7 @@ class TodoService {
     }
     // Cambia el estado de completado de una tarea
     toggleTodo(id) {
-        this.todos = this.todos.map(todo => todo.id === id ? new todo_model_1.Todo(Object.assign(Object.assign({}, todo), { complete: !todo.complete })) : todo);
+        this.todos = this.todos.map(todo => todo.id === id ? new Todo(Object.assign(Object.assign({}, todo), { complete: !todo.complete })) : todo);
         this._commit(this.todos);
     }
 }
-exports.TodoService = TodoService;
