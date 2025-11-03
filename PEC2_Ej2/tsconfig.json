@@ -1,12 +1,34 @@
 {
   "compilerOptions": {
     /* Basic Options */
+
+    // Especifica la versión de JavaScript que se generará al compilar el código TypeScript.
+    // "es2015" permite usar características modernas como clases, let/const, arrow functions, etc.
     "target": "es2015", 
+
+    // Define el sistema de módulos que se usará en el código generado.
+    // "commonjs" es el estándar para Node.js.
     "module": "commonjs", 
-    "outDir": "./dist",   
+
+    // Carpeta donde se guardarán los archivos JavaScript compilados.
+    // En este caso, todo lo compilado irá a la carpeta "dist".
+    "outDir": "./dist", 
+    
+    // Carpeta raíz donde se encuentran los archivos fuente TypeScript.
+    // Aquí se indica que el código fuente está en la carpeta "src".
     "rootDir": "./src", 
+
+    // Activa el modo estricto de TypeScript.
+    // Esto incluye varias comprobaciones de tipo más rigurosas (como `strictNullChecks`, `noImplicitAny`, etc.)
+    // Mejora la seguridad y calidad del código.
     "strict": true,
+
+    // Habilita compilaciones incrementales.
+    // TypeScript guarda información de compilación para acelerar futuras compilaciones.
     "incremental": true,
+
+    // Ruta del archivo donde se guarda la información de compilación incremental.
+    // Esto permite que el compilador sepa qué partes del proyecto han cambiado.
     "tsBuildInfoFile": "./buildcache",
   }
 }
