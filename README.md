@@ -1,4 +1,4 @@
-# PEC2 Frontend con java
+# PEC2 Frontend con JavaScript
 
 ## Autor
 
